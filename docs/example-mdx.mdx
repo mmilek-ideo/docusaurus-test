@@ -1,0 +1,96 @@
+---
+title: Przykład MDX
+sidebar_label: MDX Demo
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Przykład użycia MDX
+
+MDX pozwala łączyć Markdown z komponentami React.
+
+## Wbudowane komponenty Docusaurus
+
+<Tabs>
+  <TabItem value="js" label="JavaScript" default>
+
+```js
+function hello() {
+  console.log('Hello, world!');
+}
+```
+
+  </TabItem>
+  <TabItem value="ts" label="TypeScript">
+
+```ts
+function hello(): void {
+  console.log('Hello, world!');
+}
+```
+
+  </TabItem>
+  <TabItem value="py" label="Python">
+
+```python
+def hello():
+    print("Hello, world!")
+```
+
+  </TabItem>
+</Tabs>
+
+## Własne komponenty inline
+
+export const Button = ({children, color = '#25c2a0'}) => (
+  <button
+    style={{
+      backgroundColor: color,
+      color: 'white',
+      padding: '8px 16px',
+      borderRadius: '4px',
+      border: 'none',
+      cursor: 'pointer',
+      marginRight: '8px',
+    }}
+    onClick={() => alert('Kliknięto!')}
+  >
+    {children}
+  </button>
+);
+
+<Button>Kliknij mnie</Button>
+<Button color="#e74c3c">Czerwony</Button>
+<Button color="#3498db">Niebieski</Button>
+
+## Podświetlanie tekstu
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '4px',
+      color: '#fff',
+      padding: '0.2rem 0.5rem',
+    }}
+  >
+    {children}
+  </span>
+);
+
+Możesz <Highlight color="#25c2a0">podświetlać</Highlight> dowolny <Highlight color="#1877F2">tekst</Highlight> w dokumencie.
+
+## Admonitions (ostrzeżenia)
+
+:::tip Wskazówka
+MDX działa zarówno w `docs/` jak i w `blog/`.
+:::
+
+:::info Informacja
+Komponenty możesz też importować z `src/components/`.
+:::
+
+:::warning Uwaga
+Pamiętaj o pustych liniach przed i po blokach kodu w TabItem.
+:::
