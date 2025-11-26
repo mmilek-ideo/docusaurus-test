@@ -42,7 +42,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/mmilek-ideo/docusaurus-test/tree/main/my-website/',
+            'https://github.com/mmilek-ideo/docusaurus-test/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -51,7 +51,7 @@ const config: Config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/mmilek-ideo/docusaurus-test/tree/main/my-website/',
+            'https://github.com/mmilek-ideo/docusaurus-test/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
